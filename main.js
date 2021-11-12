@@ -205,7 +205,7 @@ class MessageServiceService {
         this.pingingIntervalInSeconds = 15;
         this.storageKey = "local_token";
         this.token = "";
-        this.rootUrl = "http://localhost:8080/input";
+        this.rootUrl = "https://powerful-savannah-44442.herokuapp.com/input";
         this.tokenUrl = this.rootUrl + "/token";
         this.pulseUrl = this.rootUrl + "/load";
         this.operationsStorage = [];
