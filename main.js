@@ -1795,7 +1795,7 @@ __webpack_require__.r(__webpack_exports__);
 class UrlService {
     constructor() {
         this.storageKey = "local_token";
-        this.rootUrl = "http://localhost:8081/input";
+        this.rootUrl = "https://murmuring-caverns-97353.herokuapp.com/input";
         this.tokenUrl = this.rootUrl + "/token";
         this.pulseUrl = this.rootUrl + "/load";
         this.contactSaveUrl = this.rootUrl + "/contact";
