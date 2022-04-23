@@ -1179,7 +1179,7 @@ class MessageServiceService {
         this.http = http;
         this.connectedStatus = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.connected = false;
-        this.rootUrl = "https://18.184.177.21:8081/input";
+        this.rootUrl = "http://18.184.177.21:8081/input";
         //private rootUrl = "http://localhost:8081/input";
         this.tokenUrl = this.rootUrl + "/auth";
         this.pulseUrl = this.rootUrl + "/load";
