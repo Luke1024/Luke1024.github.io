@@ -12,108 +12,6 @@ module.exports = __webpack_require__(/*! C:\Users\Luke\Documents\developer_page_
 
 /***/ }),
 
-/***/ "5ovg":
-/*!****************************************************************!*\
-  !*** ./src/app/message-service/sub-services/action.service.ts ***!
-  \****************************************************************/
-/*! exports provided: ActionService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionService", function() { return ActionService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _url_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./url.service */ "pZTS");
-
-
-
-
-
-
-class ActionService {
-    constructor(http, url) {
-        this.http = http;
-        this.url = url;
-        this.serviceStatus = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        this.actionBatchSendEverySeconds = 5;
-        this.actionTimerValue = this.actionBatchSendEverySeconds;
-        this.operationsStorage = [];
-        this.tokenStatus = { status: false, token: "" };
-    }
-    start() {
-        this.runBatchTimer();
-    }
-    send(code) {
-        let now = new Date();
-        let action = "T:" + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + ":" + now.getMilliseconds() +
-            " S:" + window.scrollY.toFixed(0) + " V:" + window.innerWidth.toFixed(0) + ":" + window.innerHeight.toFixed(0) + " C:" + code;
-        this.operationsStorage.push(action);
-        console.log(this.operationsStorage.length);
-    }
-    setTokenStatus(tokenStatus) {
-        this.tokenStatus = tokenStatus;
-    }
-    runBatchTimer() {
-        setInterval(() => {
-            this.actionTimerValue--;
-            if (this.actionTimerValue == 0) {
-                this.actionTimerValue = this.actionBatchSendEverySeconds;
-                this.sendMessagesInBufor();
-            }
-        }, 1000);
-    }
-    sendMessagesInBufor() {
-        if (this.isTokenActive()) {
-            this.postMessage(this.operationsStorage).subscribe(response => {
-                if (this.analyzeResponse(response)) {
-                    this.operationsStorage = [];
-                    this.serviceStatus.next(true);
-                }
-                else {
-                    console.log("problem with action sending, trying to reload token...");
-                    this.tokenStatus.status = false; // self blocking
-                    this.serviceStatus.next(false);
-                }
-            });
-        }
-    }
-    analyzeResponse(response) {
-        if (response != null) {
-            if (response.status == 200) {
-                return true;
-            }
-        }
-        return false;
-    }
-    isTokenActive() {
-        return this.tokenStatus.status;
-    }
-    postMessage(code) {
-        var pulse = { token: this.tokenStatus.token, actions: code };
-        return this.http.post(this.url.pulseUrl, pulse, { observe: 'response' }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("post action data")));
-    }
-    handleError(operation = 'operation', result) {
-        return (error) => {
-            console.error(error + ` ${operation} failed: ${error.message}`);
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(result);
-        };
-    }
-}
-ActionService.ɵfac = function ActionService_Factory(t) { return new (t || ActionService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"])); };
-ActionService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ActionService, factory: ActionService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ActionService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }, { type: _url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"] }]; }, null); })();
-
-
-/***/ }),
-
 /***/ "84zG":
 /*!******************************************!*\
   !*** ./src/app/about/about.component.ts ***!
@@ -171,7 +69,7 @@ class AboutComponent {
             },
         };
         this.springBoot = {
-            description: "Spring Boot",
+            description: "Spring_Boot",
             textColor: "green",
             cardColor: "rgb(40,40,40)",
             descriptionBlurAnimeDelay: "1.2s",
@@ -312,7 +210,7 @@ class AboutComponent {
         }
     }
     send() {
-        this.messengerService.send("about hover");
+        this.messengerService.send("about_hover");
     }
 }
 AboutComponent.ɵfac = function AboutComponent_Factory(t) { return new (t || AboutComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_1__["MessageServiceService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["ViewportScroller"])); };
@@ -446,81 +344,6 @@ const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
-
-/***/ }),
-
-/***/ "HWGp":
-/*!*****************************************************************!*\
-  !*** ./src/app/message-service/sub-services/contact.service.ts ***!
-  \*****************************************************************/
-/*! exports provided: ContactService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactService", function() { return ContactService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _url_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./url.service */ "pZTS");
-
-
-
-
-
-
-class ContactService {
-    constructor(http, url) {
-        this.http = http;
-        this.url = url;
-        this.tokenStatus = { status: false, token: "" };
-        this.status = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-    }
-    setTokenStatus(tokenStatus) {
-        this.tokenStatus = tokenStatus;
-    }
-    saveContact(contact) {
-        return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](observer => {
-            if (this.isTokenActive()) {
-                contact.token = this.tokenStatus.token;
-                this.http.put(this.url.contactSaveUrl + "/", contact, { observe: 'response' })
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("post account"))).subscribe(response => {
-                    observer.next(this.analyzeResponse(response));
-                });
-            }
-            else {
-                return rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"].arguments(false);
-            }
-        });
-    }
-    analyzeResponse(response) {
-        if (response != null) {
-            if (response.status == 200) {
-                return true;
-            }
-        }
-        return false;
-    }
-    isTokenActive() {
-        return this.tokenStatus.status;
-    }
-    handleError(operation = 'operation', result) {
-        return (error) => {
-            console.error(error + ` ${operation} failed: ${error.message}`);
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(result);
-        };
-    }
-}
-ContactService.ɵfac = function ContactService_Factory(t) { return new (t || ContactService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"])); };
-ContactService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ContactService, factory: ContactService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ContactService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }, { type: _url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"] }]; }, null); })();
 
 
 /***/ }),
@@ -790,12 +613,10 @@ class ContactComponent {
         this.modal = "none";
     }
     ngOnInit() {
-        setInterval(() => {
-            this.checkConnectedStatus();
-        }, 1000);
+        this.messageService.connectedStatus.subscribe(next => this.refreshConnectedStatus(next));
     }
-    checkConnectedStatus() {
-        this.connected = this.messageService.tokenStatus.status;
+    refreshConnectedStatus(status) {
+        this.connected = status;
         this.onChange();
     }
     onChange() {
@@ -837,7 +658,7 @@ class ContactComponent {
         });
     }
     send() {
-        this.messageService.send("contact hover");
+        this.messageService.send("contact_hover");
     }
     showSuccessResponse() {
         this.modalMessage.title = "Message succesfully send.";
@@ -956,7 +777,7 @@ class IntroComponent {
     ngOnInit() {
     }
     send() {
-        this.messengerService.send("intro hover");
+        this.messengerService.send("intro_hover");
     }
 }
 IntroComponent.ɵfac = function IntroComponent_Factory(t) { return new (t || IntroComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_1__["MessageServiceService"])); };
@@ -1278,26 +1099,30 @@ class NavbarComponent {
         this.model = "home";
     }
     ngOnInit() { }
+    hover() {
+        this.messageService.send("navbar_hover");
+    }
     home() {
-        this.messageService.send("intro button click");
+        this.messageService.send("intro_button_click");
         this.scroller.scrollToAnchor("intro");
     }
     portfolio() {
-        this.messageService.send("portfolio button click");
+        this.messageService.send("portfolio_button_click");
         this.scroller.scrollToAnchor("portfolio");
     }
     about() {
-        this.messageService.send("about button click");
+        this.messageService.send("about_button_click");
         this.scroller.scrollToAnchor("about");
     }
     contact() {
-        this.messageService.send("contact button click");
+        this.messageService.send("contact_button_click");
         this.scroller.scrollToAnchor("contact");
     }
 }
 NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_1__["ViewportScroller"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_2__["MessageServiceService"])); };
-NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 10, vars: 0, consts: [["id", "navbar"], ["id", "buttongroup"], [1, "button", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 10, vars: 0, consts: [["id", "navbar", 3, "mouseenter"], ["id", "buttongroup"], [1, "button", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseenter", function NavbarComponent_Template_div_mouseenter_0_listener() { return ctx.hover(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_button_click_2_listener() { return ctx.home(); });
@@ -1342,105 +1167,99 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageServiceService", function() { return MessageServiceService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _sub_services_token_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sub-services/token.service */ "zmEh");
-/* harmony import */ var _sub_services_action_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sub-services/action.service */ "5ovg");
-/* harmony import */ var _sub_services_contact_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sub-services/contact.service */ "HWGp");
-
-
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
 
 
 
 
 
 class MessageServiceService {
-    constructor(http, tokenService, actionService, contactService) {
+    constructor(http) {
         this.http = http;
-        this.tokenService = tokenService;
-        this.actionService = actionService;
-        this.contactService = contactService;
         this.connectedStatus = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        this.reconnectingAttempts = 30;
-        this.reconnectingDelayS = 10;
-        this.tokenStatus = { status: false, token: "" };
+        this.connected = false;
+        this.rootUrl = "https://xcyfqoiwe.xyz/input";
+        //private rootUrl = "http://localhost:8081/input";
+        this.tokenUrl = this.rootUrl + "/auth";
+        this.pulseUrl = this.rootUrl + "/load";
+        this.contactSaveUrl = this.rootUrl + "/contact";
+        this.pingTimer = 0;
+        this.pingInterval = 55;
     }
     startMessageService() {
-        this.actionService.start();
-        console.log("downloading token");
-        this.tokenService.getToken().subscribe(status => this.analyzeStatus(status));
-        this.actionService.serviceStatus.subscribe(status => this.analyzeConnectionStatus(status));
-    }
-    downloadTokenOnly() {
-        this.tokenService.getToken().subscribe(status => this.analyzeStatus(status));
-    }
-    analyzeStatus(status) {
-        this.tokenStatus = status;
-        if (this.tokenStatus.status) {
-            this.startCommunicationProcesses();
-        }
-        else {
-            this.tryToReconnect();
-        }
-    }
-    analyzeConnectionStatus(status) {
-        if (!status) {
-            this.tryToReconnect();
-        }
-    }
-    startCommunicationProcesses() {
-        console.log("starting communication processes");
-        this.actionService.setTokenStatus(this.tokenStatus);
-        this.contactService.setTokenStatus(this.tokenStatus);
-        this.connectedStatus.next(true);
-    }
-    tryToReconnect() {
-        console.log("trying to reconnect");
-        this.tokenStatus.status = false;
-        this.connectedStatus.next(false);
-        setTimeout(() => {
-            if (this.reconnectingAttempts > 0) {
-                this.reconnectingAttempts--;
-                this.executeReconnectingProcedure();
-            }
-            ;
-        }, this.reconnectingDelayS * 1000);
-    }
-    executeReconnectingProcedure() {
-        this.tokenService.pingServer().subscribe(response => {
-            if (response) {
-                this.downloadTokenOnly();
-            }
-            else {
-                console.log("server responding but there is other problem, resetting token");
-                this.tokenService.resetToken();
-                this.downloadTokenOnly();
+        this.getAuth().subscribe(response => {
+            if (this.isResponseTrue(response)) {
+                this.connected = true;
+                this.connectedStatus.next(true);
+                this.runPingTimer();
             }
         });
     }
     send(code) {
-        this.actionService.send(code);
+        if (this.connected) {
+            this.resetPingTimer();
+            this.sendAction(this.encodeMessage(code));
+        }
     }
     saveContact(contact) {
         return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](observer => {
-            this.contactService.saveContact(contact).subscribe(response => {
-                observer.next(response);
-                this.checkContactStatus(response);
-            });
+            if (this.connected) {
+                this.resetPingTimer();
+                this.http.put(this.contactSaveUrl + "/", contact, { observe: 'response' })
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("post account"))).subscribe(response => {
+                    observer.next(this.isResponseTrue(response));
+                });
+            }
+            else {
+                return observer.next(false);
+            }
         });
     }
-    checkContactStatus(status) {
-        if (!status && this.tokenStatus.status) {
+    resetPingTimer() {
+        this.pingTimer = 0;
+    }
+    runPingTimer() {
+        setInterval(() => {
+            if (this.pingTimer == this.pingInterval)
+                this.send("ping");
+            this.pingTimer++;
+        }, 1000);
+    }
+    getAuth() {
+        return this.http.get(this.tokenUrl, { observe: 'response', withCredentials: true }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("auth")));
+    }
+    isResponseTrue(response) {
+        if (response != null) {
+            if (response.status == 200) {
+                return true;
+            }
         }
+        return false;
+    }
+    sendAction(code) {
+        return this.http.post(this.pulseUrl, { message: code }, { observe: 'response', withCredentials: true })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("post action data"))).subscribe();
+    }
+    encodeMessage(code) {
+        let now = new Date();
+        return "s_" + window.scrollY.toFixed(0) + "_w_" + window.innerWidth.toFixed(0) + "_h_" + window.innerHeight.toFixed(0) + "_c_" + code;
+    }
+    handleError(operation = 'operation', result) {
+        return (error) => {
+            console.error(error + ` ${operation} failed: ${error.message}`);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(result);
+        };
     }
 }
-MessageServiceService.ɵfac = function MessageServiceService_Factory(t) { return new (t || MessageServiceService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_sub_services_token_service__WEBPACK_IMPORTED_MODULE_3__["TokenService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_sub_services_action_service__WEBPACK_IMPORTED_MODULE_4__["ActionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_sub_services_contact_service__WEBPACK_IMPORTED_MODULE_5__["ContactService"])); };
+MessageServiceService.ɵfac = function MessageServiceService_Factory(t) { return new (t || MessageServiceService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };
 MessageServiceService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: MessageServiceService, factory: MessageServiceService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MessageServiceService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }, { type: _sub_services_token_service__WEBPACK_IMPORTED_MODULE_3__["TokenService"] }, { type: _sub_services_action_service__WEBPACK_IMPORTED_MODULE_4__["ActionService"] }, { type: _sub_services_contact_service__WEBPACK_IMPORTED_MODULE_5__["ContactService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
@@ -1486,7 +1305,7 @@ class CardCircularBarComponent {
         this.cardAnimeDuration = this.cardConfig.cardAnimeDuration;
     }
     send() {
-        this.messageService.send("skill card " + this.cardConfig.description + " hover");
+        //this.messageService.send("skill_card_" + this.cardConfig.description + "_hover");
     }
 }
 CardCircularBarComponent.ɵfac = function CardCircularBarComponent_Factory(t) { return new (t || CardCircularBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_1__["MessageServiceService"])); };
@@ -1562,7 +1381,7 @@ class CardComponent {
     ngOnInit() {
     }
     loadModal() {
-        this.messageService.send("opening card: " + this.card.title);
+        this.messageService.send("opening_card_" + this.card.title);
         this.cardEmit.emit(this.card);
     }
 }
@@ -1670,7 +1489,6 @@ class CardBlockComponent {
         this.repoUrl = "";
     }
     ngOnInit() {
-        //this.messageService.getToken()
         let cardToDo = {
             title: "TodoApp",
             tech: "Angular/Spring Boot",
@@ -1692,7 +1510,7 @@ class CardBlockComponent {
             repoUrl: "https://github.com/Luke1024/TradingApp"
         };
         let cardDeveloper = {
-            title: "This page",
+            title: "This_page",
             tech: "Angular/Spring Boot",
             imgUrl: "assets/images/page/img1.jpg",
             img2Url: "assets/images/page/img2.jpg",
@@ -1702,7 +1520,7 @@ class CardBlockComponent {
             repoUrl: "https://github.com/Luke1024/developer_page_in_angular"
         };
         let cardCircularBar = {
-            title: "Circular progress bar",
+            title: "Circular_progress_bar",
             tech: "Angular",
             imgUrl: "assets/images/bar/img1.jpg",
             img2Url: "assets/images/bar/img2.jpg",
@@ -1715,17 +1533,17 @@ class CardBlockComponent {
         this.cards2.push(cardCircularBar);
     }
     send() {
-        this.messageService.send("projects hover");
+        this.messageService.send("projects_hover");
     }
     loadModal(card) {
         this.cardModal = card;
-        this.messageService.send("closing modal: " + this.cardModal.title);
+        this.messageService.send("opened_modal_" + this.cardModal.title);
         this.modal = "initial";
     }
     closeModal() {
         this.cardModal = {};
         this.modal = "none";
-        this.messageService.send("");
+        this.messageService.send("closed_modal_" + this.cardModal.title);
     }
 }
 CardBlockComponent.ɵfac = function CardBlockComponent_Factory(t) { return new (t || CardBlockComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_1__["MessageServiceService"])); };
@@ -1779,41 +1597,6 @@ CardBlockComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
 
 /***/ }),
 
-/***/ "pZTS":
-/*!*************************************************************!*\
-  !*** ./src/app/message-service/sub-services/url.service.ts ***!
-  \*************************************************************/
-/*! exports provided: UrlService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return UrlService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-class UrlService {
-    constructor() {
-        this.storageKey = "local_token";
-        this.rootUrl = "https://murmuring-caverns-97353.herokuapp.com/input";
-        this.tokenUrl = this.rootUrl + "/token";
-        this.pulseUrl = this.rootUrl + "/load";
-        this.contactSaveUrl = this.rootUrl + "/contact";
-        this.pingUrl = this.rootUrl + "/status";
-    }
-}
-UrlService.ɵfac = function UrlService_Factory(t) { return new (t || UrlService)(); };
-UrlService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UrlService, factory: UrlService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UrlService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
-
-
-/***/ }),
-
 /***/ "zUnb":
 /*!*********************!*\
   !*** ./src/main.ts ***!
@@ -1836,105 +1619,6 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].produc
 }
 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
     .catch(err => console.error(err));
-
-
-/***/ }),
-
-/***/ "zmEh":
-/*!***************************************************************!*\
-  !*** ./src/app/message-service/sub-services/token.service.ts ***!
-  \***************************************************************/
-/*! exports provided: TokenService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TokenService", function() { return TokenService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _url_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./url.service */ "pZTS");
-
-
-
-
-
-
-class TokenService {
-    constructor(http, url) {
-        this.http = http;
-        this.url = url;
-    }
-    getToken() {
-        return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](observer => {
-            var token = localStorage.getItem(this.url.storageKey);
-            if (token == null) {
-                this.http.get(this.url.tokenUrl, { observe: 'response' })
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("get token")))
-                    .subscribe(token => {
-                    observer.next(this.checkToken(token));
-                });
-            }
-            else {
-                observer.next({ status: true, token: token });
-            }
-        });
-    }
-    pingServer() {
-        return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](observer => {
-            this.http.get(this.url.pingUrl, { observe: 'response' })
-                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("get status")))
-                .subscribe(response => observer.next(this.analyzePingResponse(response)));
-        });
-    }
-    analyzePingResponse(response) {
-        if (response != null) {
-            if (response.status == 200) {
-                return true;
-            }
-        }
-        return false;
-    }
-    resetToken() {
-        localStorage.clear();
-    }
-    checkToken(response) {
-        var _a;
-        if (response != null) {
-            var status = response.status;
-            if (response.body != null) {
-                if (status == 200) {
-                    if (((_a = response.body) === null || _a === void 0 ? void 0 : _a.message) != null) {
-                        if (response.body.message.length == 15) {
-                            return { status: true, token: this.saveToken(response.body.message) };
-                        }
-                    }
-                }
-            }
-        }
-        return { status: false, token: "" };
-    }
-    saveToken(token) {
-        console.log("Setting token " + token);
-        localStorage.setItem(this.url.storageKey, token);
-        return token;
-    }
-    handleError(operation = 'operation', result) {
-        return (error) => {
-            console.error(error + ` ${operation} failed: ${error.message}`);
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(result);
-        };
-    }
-}
-TokenService.ɵfac = function TokenService_Factory(t) { return new (t || TokenService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"])); };
-TokenService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: TokenService, factory: TokenService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TokenService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }, { type: _url_service__WEBPACK_IMPORTED_MODULE_4__["UrlService"] }]; }, null); })();
 
 
 /***/ }),
