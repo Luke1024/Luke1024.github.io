@@ -69,7 +69,7 @@ class AboutComponent {
             },
         };
         this.springBoot = {
-            description: "Spring_Boot",
+            description: "Spring Boot",
             textColor: "green",
             cardColor: "rgb(40,40,40)",
             descriptionBlurAnimeDelay: "1.2s",
@@ -1206,7 +1206,7 @@ class MessageServiceService {
         return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](observer => {
             if (this.connected) {
                 this.resetPingTimer();
-                this.http.put(this.contactSaveUrl + "/", contact, { observe: 'response' })
+                this.http.post(this.contactSaveUrl + "/", contact, { observe: 'response' })
                     .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError("post account"))).subscribe(response => {
                     observer.next(this.isResponseTrue(response));
                 });
@@ -1305,7 +1305,6 @@ class CardCircularBarComponent {
         this.cardAnimeDuration = this.cardConfig.cardAnimeDuration;
     }
     send() {
-        //this.messageService.send("skill_card_" + this.cardConfig.description + "_hover");
     }
 }
 CardCircularBarComponent.ɵfac = function CardCircularBarComponent_Factory(t) { return new (t || CardCircularBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_message_service_message_service_service__WEBPACK_IMPORTED_MODULE_1__["MessageServiceService"])); };
