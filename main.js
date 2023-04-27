@@ -1212,8 +1212,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class UrlService {
     constructor() {
-        this.rootUrl = "https://xcyfqoiwe.xyz";
-        //private rootUrl = "http://localhost:8082";
+        this.rootUrl = "https://xyzndasdag.online";
+        //private rootUrl = "http://localhost:8082/";
         this.tokenUrl = this.rootUrl + "/input/auth";
         this.pulseUrl = this.rootUrl + "/input/load";
         this.contactSaveUrl = this.rootUrl + "/input/contact";
