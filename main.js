@@ -102,65 +102,6 @@ ImageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
 
 /***/ }),
 
-/***/ "6dUW":
-/*!*****************************************!*\
-  !*** ./src/app/offline-data.service.ts ***!
-  \*****************************************/
-/*! exports provided: OfflineDataService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfflineDataService", function() { return OfflineDataService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-class OfflineDataService {
-    constructor() {
-        this.normalProjects = [
-            {
-                id: 1,
-                title: "TodoApp",
-                technologies: "Angular/Spring Boot",
-                miniatureUrl: "assets/images/todo/todo_2.jpg",
-                description: "Epic project with epic technologies."
-            },
-        ];
-        this.miniProjects = [];
-        /*
-          constructor() { }
-        
-          getNormalProjects(): ProjectMiniatureDto[] {
-            return this.normalProjects;
-          }
-        
-          getMiniProjects(): ProjectMiniatureDto[] {
-            return this.miniProjects;
-          }
-        
-          getDescriptions(id:number):DescriptionDto {
-            let description = this.descriptions.get(id);
-            if(description != undefined){
-              return description;
-            } else return {} as DescriptionDto;
-          }
-        */
-        this.loremipsumShort = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.";
-        this.loremipsumLong = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra enim libero facilisis nostra nam molestie nunc commodo dictum litora ut ultricies porttitor enim. Augue malesuada fringilla aptent ut interdum consequat est. Risus iaculis lacinia curae porta eu.";
-    }
-}
-OfflineDataService.ɵfac = function OfflineDataService_Factory(t) { return new (t || OfflineDataService)(); };
-OfflineDataService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: OfflineDataService, factory: OfflineDataService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](OfflineDataService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], null, null); })();
-
-
-/***/ }),
-
 /***/ "84zG":
 /*!******************************************!*\
   !*** ./src/app/about/about.component.ts ***!
@@ -1212,8 +1153,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class UrlService {
     constructor() {
-        this.rootUrl = "https://xyzndasdag.online";
-        //private rootUrl = "http://localhost:8082/";
+        //private rootUrl = "https://xyzndasdag.online";
+        this.rootUrl = "http://localhost:3000";
         this.tokenUrl = this.rootUrl + "/input/auth";
         this.pulseUrl = this.rootUrl + "/input/load";
         this.contactSaveUrl = this.rootUrl + "/input/contact";
@@ -1374,7 +1315,7 @@ BarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.progress);
-    } }, styles: ["#bar[_ngcontent-%COMP%] {\r\n    width: 100px;\r\n    height: 100px;\r\n    position: relative;\r\n    opacity: var(--opacity);\r\n    animation: barfadein;\r\n    animation-delay: var(--fadeindelay);\r\n    animation-duration: var(--fadeinduration);\r\n    animation-fill-mode: both;\r\n}\r\n\r\n@keyframes barfadein {\r\n    from { opacity: 0; }\r\n    to { opacity: 1; }\r\n}\r\n\r\n#background[_ngcontent-%COMP%] {\r\n    width: 100px;\r\n    height: 100px;\r\n    position:absolute;\r\n    background-color: var(--blockercolor);\r\n    border-radius: 50%;\r\n    border: 1px solid rgba(255,255,255,0.2);\r\n    z-index: 0;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n    box-shadow: 5px 5px 3px 3px black, -3px -3px 3px 3px rgba(255, 255, 255, 0.3);\r\n    \r\n}\r\n\r\n#left_blocker[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index:var(--blockerzindex);\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    background-color: var(--blockercolor);\r\n    -webkit-clip-path: inset(0px 50px 0px 0px);\r\n            clip-path: inset(0px 50px 0px 0px);\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n#right_blocker[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index:1;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    background-color: var(--blockercolor);\r\n    -webkit-clip-path: inset(0px 0px 0px 50px);\r\n            clip-path: inset(0px 0px 0px 50px);\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n#left[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%) rotate(var(--leftrotation));\r\n    z-index:4;\r\n    width: 96px;\r\n    height: 96px;\r\n    background-color: var(--barcolor);\r\n    border-radius: 50%;\r\n    -webkit-clip-path: inset(0px 48px 0px 0px);\r\n            clip-path: inset(0px 48px 0px 0px);\r\n    border:1px solid rgba(0, 0, 0, 0.6);\r\n}\r\n\r\n#right[_ngcontent-%COMP%] {\r\n    position:absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%) rotate(var(--rightrotation));\r\n    z-index: 3;\r\n    width: 96px;\r\n    height: 96px;\r\n    background-color: var(--barcolor);\r\n    border-radius: 50%;\r\n    -webkit-clip-path: inset(0px 48px 0px 0px);\r\n            clip-path: inset(0px 48px 0px 0px);\r\n    border:1px solid rgba(0, 0, 0, 0.6);\r\n}\r\n\r\n#center[_ngcontent-%COMP%] {\r\n    position:absolute;\r\n    z-index:6;\r\n    width: 70px;\r\n    height: 70px;\r\n    top:50%;\r\n    left:50%;\r\n    transform:translate(-50%, -50%);\r\n    background-color: var(--centercolor);\r\n    border-radius: 50%;\r\n    border:1px solid rgba(119, 127, 155, 0.486);\r\n    box-shadow: inset 3px 3px 3px 1px rgb(0, 0, 0),\r\n    -1px -1px 1px 1px rgba(0,0,0,0.4),\r\n    1px 1px 1px 1px rgba(255,255,255,0.3);\r\n}\r\n\r\n#text[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index: 7;\r\n    top:53%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n    font-size:22px;\r\n    font-weight: bold;\r\n    color:var(--textcolor);\r\n    text-shadow: 1px 1px 1px black, -1px 0 rgba(255,255,255,0.2), 0 1px rgba(255,255,255,0.2), 1px 0 rgba(255,255,255,0.2), 0 -1px rgba(255,255,255,0.2);\r\n    font-family: bazzaronite;\r\n}\r\n\r\n@font-face {\r\n    font-family:bazzaronite;\r\n    src: url(bazaronite.regular.ttf)\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2Isa0JBQWtCO0lBQ2xCLHVCQUF1QjtJQUN2QixvQkFBb0I7SUFDcEIsbUNBQW1DO0lBQ25DLHlDQUF5QztJQUN6Qyx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxPQUFPLFVBQVUsRUFBRTtJQUNuQixLQUFLLFVBQVUsRUFBRTtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsaUJBQWlCO0lBQ2pCLHFDQUFxQztJQUNyQyxrQkFBa0I7SUFDbEIsdUNBQXVDO0lBQ3ZDLFVBQVU7SUFDVixPQUFPO0lBQ1AsUUFBUTtJQUNSLGdDQUFnQztJQUNoQyw2RUFBNkU7O0FBRWpGOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLDRCQUE0QjtJQUM1QixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixxQ0FBcUM7SUFDckMsMENBQWtDO1lBQWxDLGtDQUFrQztJQUNsQyxPQUFPO0lBQ1AsUUFBUTtJQUNSLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsWUFBWTtJQUNaLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIscUNBQXFDO0lBQ3JDLDBDQUFrQztZQUFsQyxrQ0FBa0M7SUFDbEMsT0FBTztJQUNQLFFBQVE7SUFDUixnQ0FBZ0M7QUFDcEM7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsT0FBTztJQUNQLFFBQVE7SUFDUiw0REFBNEQ7SUFDNUQsU0FBUztJQUNULFdBQVc7SUFDWCxZQUFZO0lBQ1osaUNBQWlDO0lBQ2pDLGtCQUFrQjtJQUNsQiwwQ0FBa0M7WUFBbEMsa0NBQWtDO0lBQ2xDLG1DQUFtQztBQUN2Qzs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixPQUFPO0lBQ1AsUUFBUTtJQUNSLDZEQUE2RDtJQUM3RCxVQUFVO0lBQ1YsV0FBVztJQUNYLFlBQVk7SUFDWixpQ0FBaUM7SUFDakMsa0JBQWtCO0lBQ2xCLDBDQUFrQztZQUFsQyxrQ0FBa0M7SUFDbEMsbUNBQW1DO0FBQ3ZDOztBQUVBO0lBQ0ksaUJBQWlCO0lBQ2pCLFNBQVM7SUFDVCxXQUFXO0lBQ1gsWUFBWTtJQUNaLE9BQU87SUFDUCxRQUFRO0lBQ1IsK0JBQStCO0lBQy9CLG9DQUFvQztJQUNwQyxrQkFBa0I7SUFDbEIsMkNBQTJDO0lBQzNDOzt5Q0FFcUM7QUFDekM7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLE9BQU87SUFDUCxRQUFRO0lBQ1IsZ0NBQWdDO0lBQ2hDLGNBQWM7SUFDZCxpQkFBaUI7SUFDakIsc0JBQXNCO0lBQ3RCLG9KQUFvSjtJQUNwSix3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkI7QUFDSiIsImZpbGUiOiJiYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4jYmFyIHtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBvcGFjaXR5OiB2YXIoLS1vcGFjaXR5KTtcclxuICAgIGFuaW1hdGlvbjogYmFyZmFkZWluO1xyXG4gICAgYW5pbWF0aW9uLWRlbGF5OiB2YXIoLS1mYWRlaW5kZWxheSk7XHJcbiAgICBhbmltYXRpb24tZHVyYXRpb246IHZhcigtLWZhZGVpbmR1cmF0aW9uKTtcclxuICAgIGFuaW1hdGlvbi1maWxsLW1vZGU6IGJvdGg7XHJcbn1cclxuXHJcbkBrZXlmcmFtZXMgYmFyZmFkZWluIHtcclxuICAgIGZyb20geyBvcGFjaXR5OiAwOyB9XHJcbiAgICB0byB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5cclxuI2JhY2tncm91bmQge1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHBvc2l0aW9uOmFic29sdXRlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmxvY2tlcmNvbG9yKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsMC4yKTtcclxuICAgIHotaW5kZXg6IDA7XHJcbiAgICB0b3A6NTAlO1xyXG4gICAgbGVmdDo1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAgIGJveC1zaGFkb3c6IDVweCA1cHggM3B4IDNweCBibGFjaywgLTNweCAtM3B4IDNweCAzcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpO1xyXG4gICAgXHJcbn1cclxuXHJcbiNsZWZ0X2Jsb2NrZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgei1pbmRleDp2YXIoLS1ibG9ja2VyemluZGV4KTtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ibG9ja2VyY29sb3IpO1xyXG4gICAgY2xpcC1wYXRoOiBpbnNldCgwcHggNTBweCAwcHggMHB4KTtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG59XHJcblxyXG4jcmlnaHRfYmxvY2tlciB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OjE7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmxvY2tlcmNvbG9yKTtcclxuICAgIGNsaXAtcGF0aDogaW5zZXQoMHB4IDBweCAwcHggNTBweCk7XHJcbiAgICB0b3A6NTAlO1xyXG4gICAgbGVmdDo1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxufVxyXG5cclxuI2xlZnQge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOjUwJTtcclxuICAgIGxlZnQ6NTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKHZhcigtLWxlZnRyb3RhdGlvbikpO1xyXG4gICAgei1pbmRleDo0O1xyXG4gICAgd2lkdGg6IDk2cHg7XHJcbiAgICBoZWlnaHQ6IDk2cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1iYXJjb2xvcik7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBjbGlwLXBhdGg6IGluc2V0KDBweCA0OHB4IDBweCAwcHgpO1xyXG4gICAgYm9yZGVyOjFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuNik7XHJcbn1cclxuXHJcbiNyaWdodCB7XHJcbiAgICBwb3NpdGlvbjphYnNvbHV0ZTtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpIHJvdGF0ZSh2YXIoLS1yaWdodHJvdGF0aW9uKSk7XHJcbiAgICB6LWluZGV4OiAzO1xyXG4gICAgd2lkdGg6IDk2cHg7XHJcbiAgICBoZWlnaHQ6IDk2cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1iYXJjb2xvcik7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBjbGlwLXBhdGg6IGluc2V0KDBweCA0OHB4IDBweCAwcHgpO1xyXG4gICAgYm9yZGVyOjFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuNik7XHJcbn1cclxuXHJcbiNjZW50ZXIge1xyXG4gICAgcG9zaXRpb246YWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OjY7XHJcbiAgICB3aWR0aDogNzBweDtcclxuICAgIGhlaWdodDogNzBweDtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jZW50ZXJjb2xvcik7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBib3JkZXI6MXB4IHNvbGlkIHJnYmEoMTE5LCAxMjcsIDE1NSwgMC40ODYpO1xyXG4gICAgYm94LXNoYWRvdzogaW5zZXQgM3B4IDNweCAzcHggMXB4IHJnYigwLCAwLCAwKSxcclxuICAgIC0xcHggLTFweCAxcHggMXB4IHJnYmEoMCwwLDAsMC40KSxcclxuICAgIDFweCAxcHggMXB4IDFweCByZ2JhKDI1NSwyNTUsMjU1LDAuMyk7XHJcbn1cclxuXHJcbiN0ZXh0IHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHotaW5kZXg6IDc7XHJcbiAgICB0b3A6NTMlO1xyXG4gICAgbGVmdDo1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAgIGZvbnQtc2l6ZToyMnB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBjb2xvcjp2YXIoLS10ZXh0Y29sb3IpO1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMXB4IGJsYWNrLCAtMXB4IDAgcmdiYSgyNTUsMjU1LDI1NSwwLjIpLCAwIDFweCByZ2JhKDI1NSwyNTUsMjU1LDAuMiksIDFweCAwIHJnYmEoMjU1LDI1NSwyNTUsMC4yKSwgMCAtMXB4IHJnYmEoMjU1LDI1NSwyNTUsMC4yKTtcclxuICAgIGZvbnQtZmFtaWx5OiBiYXp6YXJvbml0ZTtcclxufVxyXG5cclxuQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTpiYXp6YXJvbml0ZTtcclxuICAgIHNyYzogdXJsKGJhemFyb25pdGUucmVndWxhci50dGYpXHJcbn0iXX0= */"] });
+    } }, styles: ["#bar[_ngcontent-%COMP%] {\r\n    width: 100px;\r\n    height: 100px;\r\n    position: relative;\r\n    opacity: var(--opacity);\r\n    animation: barfadein;\r\n    animation-delay: var(--fadeindelay);\r\n    animation-duration: var(--fadeinduration);\r\n    animation-fill-mode: both;\r\n}\r\n\r\n@keyframes barfadein {\r\n    from { opacity: 0; }\r\n    to { opacity: 1; }\r\n}\r\n\r\n#background[_ngcontent-%COMP%] {\r\n    width: 100px;\r\n    height: 100px;\r\n    position:absolute;\r\n    background-color: var(--blockercolor);\r\n    border-radius: 50%;\r\n    border: 1px solid rgba(255,255,255,0.2);\r\n    z-index: 0;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n    box-shadow: 5px 5px 3px 3px black, -3px -3px 3px 3px rgba(255, 255, 255, 0.3);\r\n    \r\n}\r\n\r\n#left_blocker[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index:var(--blockerzindex);\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    background-color: var(--blockercolor);\r\n    clip-path: inset(0px 50px 0px 0px);\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n#right_blocker[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index:1;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    background-color: var(--blockercolor);\r\n    clip-path: inset(0px 0px 0px 50px);\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n#left[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%) rotate(var(--leftrotation));\r\n    z-index:4;\r\n    width: 96px;\r\n    height: 96px;\r\n    background-color: var(--barcolor);\r\n    border-radius: 50%;\r\n    clip-path: inset(0px 48px 0px 0px);\r\n    border:1px solid rgba(0, 0, 0, 0.6);\r\n}\r\n\r\n#right[_ngcontent-%COMP%] {\r\n    position:absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%) rotate(var(--rightrotation));\r\n    z-index: 3;\r\n    width: 96px;\r\n    height: 96px;\r\n    background-color: var(--barcolor);\r\n    border-radius: 50%;\r\n    clip-path: inset(0px 48px 0px 0px);\r\n    border:1px solid rgba(0, 0, 0, 0.6);\r\n}\r\n\r\n#center[_ngcontent-%COMP%] {\r\n    position:absolute;\r\n    z-index:6;\r\n    width: 70px;\r\n    height: 70px;\r\n    top:50%;\r\n    left:50%;\r\n    transform:translate(-50%, -50%);\r\n    background-color: var(--centercolor);\r\n    border-radius: 50%;\r\n    border:1px solid rgba(119, 127, 155, 0.486);\r\n    box-shadow: inset 3px 3px 3px 1px rgb(0, 0, 0),\r\n    -1px -1px 1px 1px rgba(0,0,0,0.4),\r\n    1px 1px 1px 1px rgba(255,255,255,0.3);\r\n}\r\n\r\n#text[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    z-index: 7;\r\n    top:53%;\r\n    left:50%;\r\n    transform: translate(-50%, -50%);\r\n    font-size:22px;\r\n    font-weight: bold;\r\n    color:var(--textcolor);\r\n    text-shadow: 1px 1px 1px black, -1px 0 rgba(255,255,255,0.2), 0 1px rgba(255,255,255,0.2), 1px 0 rgba(255,255,255,0.2), 0 -1px rgba(255,255,255,0.2);\r\n    font-family: bazzaronite;\r\n}\r\n\r\n@font-face {\r\n    font-family:bazzaronite;\r\n    src: url(bazaronite.regular.ttf)\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2Isa0JBQWtCO0lBQ2xCLHVCQUF1QjtJQUN2QixvQkFBb0I7SUFDcEIsbUNBQW1DO0lBQ25DLHlDQUF5QztJQUN6Qyx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxPQUFPLFVBQVUsRUFBRTtJQUNuQixLQUFLLFVBQVUsRUFBRTtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsaUJBQWlCO0lBQ2pCLHFDQUFxQztJQUNyQyxrQkFBa0I7SUFDbEIsdUNBQXVDO0lBQ3ZDLFVBQVU7SUFDVixPQUFPO0lBQ1AsUUFBUTtJQUNSLGdDQUFnQztJQUNoQyw2RUFBNkU7O0FBRWpGOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLDRCQUE0QjtJQUM1QixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixxQ0FBcUM7SUFDckMsa0NBQWtDO0lBQ2xDLE9BQU87SUFDUCxRQUFRO0lBQ1IsZ0NBQWdDO0FBQ3BDOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixxQ0FBcUM7SUFDckMsa0NBQWtDO0lBQ2xDLE9BQU87SUFDUCxRQUFRO0lBQ1IsZ0NBQWdDO0FBQ3BDOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLE9BQU87SUFDUCxRQUFRO0lBQ1IsNERBQTREO0lBQzVELFNBQVM7SUFDVCxXQUFXO0lBQ1gsWUFBWTtJQUNaLGlDQUFpQztJQUNqQyxrQkFBa0I7SUFDbEIsa0NBQWtDO0lBQ2xDLG1DQUFtQztBQUN2Qzs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixPQUFPO0lBQ1AsUUFBUTtJQUNSLDZEQUE2RDtJQUM3RCxVQUFVO0lBQ1YsV0FBVztJQUNYLFlBQVk7SUFDWixpQ0FBaUM7SUFDakMsa0JBQWtCO0lBQ2xCLGtDQUFrQztJQUNsQyxtQ0FBbUM7QUFDdkM7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsU0FBUztJQUNULFdBQVc7SUFDWCxZQUFZO0lBQ1osT0FBTztJQUNQLFFBQVE7SUFDUiwrQkFBK0I7SUFDL0Isb0NBQW9DO0lBQ3BDLGtCQUFrQjtJQUNsQiwyQ0FBMkM7SUFDM0M7O3lDQUVxQztBQUN6Qzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsT0FBTztJQUNQLFFBQVE7SUFDUixnQ0FBZ0M7SUFDaEMsY0FBYztJQUNkLGlCQUFpQjtJQUNqQixzQkFBc0I7SUFDdEIsb0pBQW9KO0lBQ3BKLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QjtBQUNKIiwiZmlsZSI6ImJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbiNiYXIge1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIG9wYWNpdHk6IHZhcigtLW9wYWNpdHkpO1xyXG4gICAgYW5pbWF0aW9uOiBiYXJmYWRlaW47XHJcbiAgICBhbmltYXRpb24tZGVsYXk6IHZhcigtLWZhZGVpbmRlbGF5KTtcclxuICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogdmFyKC0tZmFkZWluZHVyYXRpb24pO1xyXG4gICAgYW5pbWF0aW9uLWZpbGwtbW9kZTogYm90aDtcclxufVxyXG5cclxuQGtleWZyYW1lcyBiYXJmYWRlaW4ge1xyXG4gICAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cclxuICAgIHRvIHsgb3BhY2l0eTogMTsgfVxyXG59XHJcblxyXG4jYmFja2dyb3VuZCB7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgcG9zaXRpb246YWJzb2x1dGU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ibG9ja2VyY29sb3IpO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwwLjIpO1xyXG4gICAgei1pbmRleDogMDtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgYm94LXNoYWRvdzogNXB4IDVweCAzcHggM3B4IGJsYWNrLCAtM3B4IC0zcHggM3B4IDNweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMyk7XHJcbiAgICBcclxufVxyXG5cclxuI2xlZnRfYmxvY2tlciB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OnZhcigtLWJsb2NrZXJ6aW5kZXgpO1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJsb2NrZXJjb2xvcik7XHJcbiAgICBjbGlwLXBhdGg6IGluc2V0KDBweCA1MHB4IDBweCAwcHgpO1xyXG4gICAgdG9wOjUwJTtcclxuICAgIGxlZnQ6NTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbn1cclxuXHJcbiNyaWdodF9ibG9ja2VyIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHotaW5kZXg6MTtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ibG9ja2VyY29sb3IpO1xyXG4gICAgY2xpcC1wYXRoOiBpbnNldCgwcHggMHB4IDBweCA1MHB4KTtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG59XHJcblxyXG4jbGVmdCB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6NTAlO1xyXG4gICAgbGVmdDo1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUodmFyKC0tbGVmdHJvdGF0aW9uKSk7XHJcbiAgICB6LWluZGV4OjQ7XHJcbiAgICB3aWR0aDogOTZweDtcclxuICAgIGhlaWdodDogOTZweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJhcmNvbG9yKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGNsaXAtcGF0aDogaW5zZXQoMHB4IDQ4cHggMHB4IDBweCk7XHJcbiAgICBib3JkZXI6MXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC42KTtcclxufVxyXG5cclxuI3JpZ2h0IHtcclxuICAgIHBvc2l0aW9uOmFic29sdXRlO1xyXG4gICAgdG9wOjUwJTtcclxuICAgIGxlZnQ6NTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKHZhcigtLXJpZ2h0cm90YXRpb24pKTtcclxuICAgIHotaW5kZXg6IDM7XHJcbiAgICB3aWR0aDogOTZweDtcclxuICAgIGhlaWdodDogOTZweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJhcmNvbG9yKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGNsaXAtcGF0aDogaW5zZXQoMHB4IDQ4cHggMHB4IDBweCk7XHJcbiAgICBib3JkZXI6MXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC42KTtcclxufVxyXG5cclxuI2NlbnRlciB7XHJcbiAgICBwb3NpdGlvbjphYnNvbHV0ZTtcclxuICAgIHotaW5kZXg6NjtcclxuICAgIHdpZHRoOiA3MHB4O1xyXG4gICAgaGVpZ2h0OiA3MHB4O1xyXG4gICAgdG9wOjUwJTtcclxuICAgIGxlZnQ6NTAlO1xyXG4gICAgdHJhbnNmb3JtOnRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNlbnRlcmNvbG9yKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJvcmRlcjoxcHggc29saWQgcmdiYSgxMTksIDEyNywgMTU1LCAwLjQ4Nik7XHJcbiAgICBib3gtc2hhZG93OiBpbnNldCAzcHggM3B4IDNweCAxcHggcmdiKDAsIDAsIDApLFxyXG4gICAgLTFweCAtMXB4IDFweCAxcHggcmdiYSgwLDAsMCwwLjQpLFxyXG4gICAgMXB4IDFweCAxcHggMXB4IHJnYmEoMjU1LDI1NSwyNTUsMC4zKTtcclxufVxyXG5cclxuI3RleHQge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgei1pbmRleDogNztcclxuICAgIHRvcDo1MyU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgZm9udC1zaXplOjIycHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGNvbG9yOnZhcigtLXRleHRjb2xvcik7XHJcbiAgICB0ZXh0LXNoYWRvdzogMXB4IDFweCAxcHggYmxhY2ssIC0xcHggMCByZ2JhKDI1NSwyNTUsMjU1LDAuMiksIDAgMXB4IHJnYmEoMjU1LDI1NSwyNTUsMC4yKSwgMXB4IDAgcmdiYSgyNTUsMjU1LDI1NSwwLjIpLCAwIC0xcHggcmdiYSgyNTUsMjU1LDI1NSwwLjIpO1xyXG4gICAgZm9udC1mYW1pbHk6IGJhenphcm9uaXRlO1xyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OmJhenphcm9uaXRlO1xyXG4gICAgc3JjOiB1cmwoYmF6YXJvbml0ZS5yZWd1bGFyLnR0ZilcclxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BarComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1670,8 +1611,8 @@ CardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardBlockComponent", function() { return CardBlockComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../message-service/backend-connector-service */ "UWbx");
-/* harmony import */ var _offline_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../offline-data.service */ "6dUW");
+/* harmony import */ var _offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../offline-service/offline-data.service */ "ugOU");
+/* harmony import */ var _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../message-service/backend-connector-service */ "UWbx");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _card_card_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../card/card.component */ "mJ8H");
 
@@ -1699,35 +1640,40 @@ function CardBlockComponent_div_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("miniature", miniature_r3);
 } }
 class CardBlockComponent {
-    constructor(backendConnector, offlineData) {
-        this.backendConnector = backendConnector;
+    constructor(offlineData, backendConnector) {
         this.offlineData = offlineData;
+        this.backendConnector = backendConnector;
         this.modal = "none";
         this.miniatures = [];
         this.miniaturesMini = [];
     }
     ngOnInit() {
-        //this.miniatures = this.offlineData.getNormalProjects();
-        if (this.backendConnector.connected) {
-            this.getProjects();
-        }
-        else {
-            this.backendConnector.connectedStatus.subscribe(next => {
-                if (next) {
-                    this.getProjects();
-                }
-            });
-        }
+        this.miniatures = this.offlineData.getNormalProjects();
+        this.miniaturesMini = this.offlineData.getMiniProjects();
     }
-    getProjects() {
+    //this.miniatures = this.offlineData.getNormalProjects();
+    /*
+        if(this.backendConnector.connected){
+          this.getProjects();
+        } else {
+          this.backendConnector.connectedStatus.subscribe(next => {
+            if(next){
+              this.getProjects();
+            }
+          })
+        }
+        */
+    /*
+      private getProjects(){
         this.backendConnector.getNormalProjects().subscribe(response => this.miniatures = response);
         this.backendConnector.getMiniProjects().subscribe(response => this.miniaturesMini = response);
-    }
+      }
+    */
     send() {
-        this.backendConnector.send("projects_hover");
+        //this.backendConnector.send("projects_hover");
     }
 }
-CardBlockComponent.ɵfac = function CardBlockComponent_Factory(t) { return new (t || CardBlockComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_1__["BackendConnectorService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_offline_data_service__WEBPACK_IMPORTED_MODULE_2__["OfflineDataService"])); };
+CardBlockComponent.ɵfac = function CardBlockComponent_Factory(t) { return new (t || CardBlockComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_1__["OfflineDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"])); };
 CardBlockComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CardBlockComponent, selectors: [["app-card-block"]], hostVars: 2, hostBindings: function CardBlockComponent_HostBindings(rf, ctx) { if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("--modal_display", ctx.modal);
     } }, decls: 14, vars: 2, consts: [["id", "background", 3, "mouseenter"], ["id", "block"], [2, "height", "100px", "position", "relative"], ["id", "projects"], ["id", "container", 1, "container"], [1, "row"], [4, "ngFor", "ngForOf"], [2, "height", "100px", "position", "relative", "margin-top", "100px"], ["id", "mprojects"], ["id", "container2", 1, "container"], [3, "miniature"]], template: function CardBlockComponent_Template(rf, ctx) { if (rf & 1) {
@@ -1769,10 +1715,366 @@ CardBlockComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                 templateUrl: './card-block.component.html',
                 styleUrls: ['./card-block.component.css']
             }]
-    }], function () { return [{ type: _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_1__["BackendConnectorService"] }, { type: _offline_data_service__WEBPACK_IMPORTED_MODULE_2__["OfflineDataService"] }]; }, { modal: [{
+    }], function () { return [{ type: _offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_1__["OfflineDataService"] }, { type: _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"] }]; }, { modal: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
             args: ["style.--modal_display"]
         }] }); })();
+
+
+/***/ }),
+
+/***/ "tj+r":
+/*!**************************************!*\
+  !*** ./src/app/data/descriptions.ts ***!
+  \**************************************/
+/*! exports provided: Descriptions */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Descriptions", function() { return Descriptions; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class Descriptions {
+    constructor() {
+        this.todoPart1 = {
+            description: "This is my first application in which I connected Spring Boot and Angular together.\n" +
+                "When I started this app I knew nothing about front-end development. \n" +
+                "I started from scratch in pure javascript which become completely inefficient instantly.\n" +
+                "Plus is that I now understand fully why frameworks were developed.\n" +
+                "Next in line was jQuery. This was much better but lacked efficient code structurization.\n" +
+                "Now I was ready to use something completely modern so I used Angular.",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 670,
+                imageUrl: "assets/images/todo/todo_1.jpg",
+                description: ""
+            }
+        };
+        this.todoPart2 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 750,
+                imageUrl: "assets/images/todo/todo_2.jpg",
+                description: "You can create an account to store tasks."
+            }
+        };
+        this.todoPart3 = {
+            description: "",
+            containImage: true,
+            imageTop: false,
+            image: {
+                width: 800,
+                height: 90,
+                imageUrl: "assets/images/todo/todo_3.jpg",
+                description: "Backend messages and status codes are shown under the menu."
+            }
+        };
+        this.todoProjectDescription = {
+            title: "TodoApp",
+            intro: "My first application using Angular and Spring Boot at the same time.",
+            descriptionPartDtos: [this.todoPart1, this.todoPart2, this.todoPart3],
+            buttonDtos: [
+                {
+                    buttonDescription: "Open github repository",
+                    buttonUrl: "https://github.com/Luke1024/ToDo_fullStackApp"
+                }
+            ]
+        };
+        this.tradingPart1 = {
+            description: "This app is my earlier project (https://github.com/Luke1024/financial-analytics)" +
+                " extremely simplified to actually make it possible to finish it in a reasonable time" +
+                " (or finish at all) and show it as a portfolio project. " +
+                "The idea for this app came to me naturally because I was involved in trading earlier in my career.\n" +
+                "This app can simulate trading on the forex market on EUR/USD currency pair." +
+                " The app is using external API to update EUR/USD exchange rate in real-time every 5 minutes" +
+                " (limits of free API) and uses this data to compute profits and balance of accounts created by a user.",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 600,
+                imageUrl: "assets/images/trading/trading_1.jpg",
+                description: "Current market data is downloaded in real-time and plotted on the chart."
+            }
+        };
+        this.tradingPart2 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 600,
+                imageUrl: "assets/images/trading/trading_2.jpg",
+                description: "It's possible to open multiple accounts and multiple orders within a single account."
+            }
+        };
+        this.tradingProjectDescription = {
+            title: "Trading App",
+            intro: "This app is simulating forex trading on EUR/USD currency pair.",
+            descriptionPartDtos: [this.tradingPart1, this.tradingPart2],
+            buttonDtos: [
+                {
+                    buttonDescription: "Open github repository",
+                    buttonUrl: "https://github.com/Luke1024/TradingApp"
+                }
+            ]
+        };
+        this.thisPart1 = {
+            description: "This page is my first occasion for some fun in CSS and to try some styling." +
+                " I caught some neumorphic vibe and tried to implement it." +
+                " This is not the final version but I definitely will try to have more design fun with frontends" +
+                " instead of focusing only on basic functionality. This page has also some user tracking functionality." +
+                " Yes, I could have used hotjar or google analytics but sometimes it's fun to implement something like this by myself.",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 800,
+                imageUrl: "assets/images/page/this_page_1.jpg",
+                description: ""
+            }
+        };
+        this.thisPart2 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 800,
+                imageUrl: "assets/images/page/this_page_2.jpg",
+                description: ""
+            }
+        };
+        this.thisPage = {
+            title: "This page",
+            intro: "",
+            descriptionPartDtos: [this.thisPart1, this.thisPart2],
+            buttonDtos: [
+                {
+                    buttonDescription: "Open github repository with developer page.",
+                    buttonUrl: "https://github.com/Luke1024/developer_page_in_angular",
+                }
+            ],
+        };
+        this.progressPart1 = {
+            description: "This is what the name implies. Although it is also animated and configurable. " +
+                "I had fun with making percentage display looking like lcd screen.",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 800,
+                imageUrl: "assets/images/progress/circular_bar_1.jpg",
+                description: ""
+            }
+        };
+        this.progressPart2 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 800,
+                imageUrl: "assets/images/progress/circular_bar_2.jpg",
+                description: ""
+            }
+        };
+        this.progress = {
+            title: "Circular progress bar",
+            intro: "",
+            descriptionPartDtos: [this.progressPart1, this.progressPart2],
+            buttonDtos: [
+                {
+                    buttonDescription: "Open github repository",
+                    buttonUrl: "https://github.com/Luke1024/Circular_progress_bar_in_angular",
+                }
+            ]
+        };
+        this.messengerPart1 = {
+            description: "This is project that I developed to understand how messenger application could be build. The project utilizes Spring Boot for the server-side operations and Angular for the client-side user interface. At the current stage of this project sockets are not used, it's build more like a typical webapp using REST api. Client side is making requests to update, server push is not used in any form.",
+            containImage: true,
+            imageTop: false,
+            image: {
+                width: 800,
+                height: 600,
+                imageUrl: "assets/images/messenger/messenger_1.jpg",
+                description: ""
+            }
+        };
+        this.messengerPart2 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 600,
+                imageUrl: "assets/images/messenger/messenger_2.jpg",
+                description: ""
+            }
+        };
+        this.messengerPart3 = {
+            description: "",
+            containImage: true,
+            imageTop: true,
+            image: {
+                width: 800,
+                height: 600,
+                imageUrl: "assets/images/messenger/messenger_3.jpg",
+                description: ""
+            }
+        };
+        this.messenger = {
+            title: "Messenger",
+            intro: "",
+            descriptionPartDtos: [this.messengerPart1, this.messengerPart2, this.messengerPart3],
+            buttonDtos: [
+                {
+                    buttonDescription: "Open github repository",
+                    buttonUrl: "https://github.com/Luke1024/messenger"
+                }
+            ]
+        };
+    }
+}
+Descriptions.ɵfac = function Descriptions_Factory(t) { return new (t || Descriptions)(); };
+Descriptions.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: Descriptions, factory: Descriptions.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Descriptions, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "trqa":
+/*!************************************!*\
+  !*** ./src/app/data/miniatures.ts ***!
+  \************************************/
+/*! exports provided: Miniatures */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Miniatures", function() { return Miniatures; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class Miniatures {
+    constructor() {
+        this.todo = {
+            id: 1,
+            title: "TodoApp",
+            technologies: "Angular/Spring Boot",
+            miniatureUrl: "assets/images/todo/todo_2.jpg",
+        };
+        this.trading = {
+            id: 2,
+            title: "TradingApp",
+            technologies: "Angular/Spring Boot",
+            miniatureUrl: "assets/images/trading/trading_1.jpg",
+        };
+        this.thispage = {
+            id: 3,
+            title: "This page",
+            technologies: "Angular",
+            miniatureUrl: "assets/images/page/this_page_1.jpg"
+        };
+        this.progress = {
+            id: 4,
+            title: "Circular progress bar",
+            technologies: "Angular",
+            miniatureUrl: "assets/images/progress/circular_bar_2.jpg"
+        };
+        this.messenger = {
+            id: 5,
+            title: "Messenger",
+            technologies: "Angular/Spring Boot",
+            miniatureUrl: "assets/images/messenger/messenger_2.jpg"
+        };
+    }
+}
+Miniatures.ɵfac = function Miniatures_Factory(t) { return new (t || Miniatures)(); };
+Miniatures.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: Miniatures, factory: Miniatures.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Miniatures, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "ugOU":
+/*!*********************************************************!*\
+  !*** ./src/app/offline-service/offline-data.service.ts ***!
+  \*********************************************************/
+/*! exports provided: OfflineDataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfflineDataService", function() { return OfflineDataService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _data_miniatures__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/miniatures */ "trqa");
+/* harmony import */ var _data_descriptions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/descriptions */ "tj+r");
+
+
+
+
+class OfflineDataService {
+    constructor(miniatures, descriptions) {
+        this.miniatures = miniatures;
+        this.descriptions = descriptions;
+        this.normalProjects = [
+            this.miniatures.messenger,
+            this.miniatures.thispage,
+            this.miniatures.trading,
+            this.miniatures.todo
+        ];
+        this.miniProjects = [
+            this.miniatures.progress
+        ];
+        this.descriptionList = new Map([
+            [1, this.descriptions.todoProjectDescription],
+            [2, this.descriptions.tradingProjectDescription],
+            [3, this.descriptions.thisPage],
+            [4, this.descriptions.progress],
+            [5, this.descriptions.messenger]
+        ]);
+    }
+    getNormalProjects() {
+        return this.normalProjects;
+    }
+    getMiniProjects() {
+        return this.miniProjects;
+    }
+    getDescriptions(id) {
+        let description = this.descriptionList.get(id);
+        if (description != undefined) {
+            return description;
+        }
+        else
+            return {};
+    }
+}
+OfflineDataService.ɵfac = function OfflineDataService_Factory(t) { return new (t || OfflineDataService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_miniatures__WEBPACK_IMPORTED_MODULE_1__["Miniatures"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_descriptions__WEBPACK_IMPORTED_MODULE_2__["Descriptions"])); };
+OfflineDataService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: OfflineDataService, factory: OfflineDataService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](OfflineDataService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _data_miniatures__WEBPACK_IMPORTED_MODULE_1__["Miniatures"] }, { type: _data_descriptions__WEBPACK_IMPORTED_MODULE_2__["Descriptions"] }]; }, null); })();
 
 
 /***/ }),
@@ -1791,7 +2093,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../message-service/backend-connector-service */ "UWbx");
 /* harmony import */ var _url_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../url.service */ "i3B0");
-/* harmony import */ var _offline_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../offline-data.service */ "6dUW");
+/* harmony import */ var _offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../offline-service/offline-data.service */ "ugOU");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "ofXK");
 
 
@@ -1877,21 +2179,23 @@ class DescriptionComponent {
     }
     ngOnInit() {
         let id = parseInt(this.route.snapshot.paramMap.get('id'));
-        //this.description = this.offlineData.getDescriptions(1);
-        this.connector.getDescription(id).subscribe(response => {
-            if (response.ok) {
-                if (response.body != null) {
-                    this.description = response.body;
-                    console.log("Title: " + this.description.title);
-                    console.log("Button count: " + this.description.buttonDtos.length);
-                    console.log("Description part counts: " + this.description.descriptionPartDtos.length);
-                    return;
-                }
+        this.description = this.offlineData.getDescriptions(id);
+        /*
+          this.connector.getDescription(id).subscribe(response => {
+          if(response.ok){
+            if(response.body != null){
+              this.description = response.body;
+              console.log("Title: " + this.description.title);
+              console.log("Button count: " + this.description.buttonDtos.length)
+              console.log("Description part counts: " + this.description.descriptionPartDtos.length)
+              return;
             }
-        });
+          }
+        })
+        */
     }
 }
-DescriptionComponent.ɵfac = function DescriptionComponent_Factory(t) { return new (t || DescriptionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_url_service__WEBPACK_IMPORTED_MODULE_3__["UrlService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_offline_data_service__WEBPACK_IMPORTED_MODULE_4__["OfflineDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
+DescriptionComponent.ɵfac = function DescriptionComponent_Factory(t) { return new (t || DescriptionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_url_service__WEBPACK_IMPORTED_MODULE_3__["UrlService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_4__["OfflineDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
 DescriptionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DescriptionComponent, selectors: [["app-description"]], decls: 11, vars: 4, consts: [["id", "b1"], ["id", "b2"], ["id", "button", "routerLink", "/home", 2, "position", "fixed", "top", "0px"], [2, "color", "white", "text-align", "center"], [2, "color", "white", "padding-top", "25px", "text-indent", "50px"], [4, "ngFor", "ngForOf"], [2, "margin", "100px"], ["id", "button", "target", "_blank", "style", "margin:30px", 3, "href", 4, "ngFor", "ngForOf"], ["style", "color:white; text-indent: 30px;", 4, "ngIf"], ["style", "border:3px solid gray; border-radius: 10px; margin:auto; padding:5px; max-width: min-content; margin-top: 50px; margin-bottom: 50px;", 4, "ngIf"], ["style", "color:white; font-size: large; text-indent: 30px;", 4, "ngIf"], [2, "color", "white", "text-indent", "30px"], [2, "border", "3px solid gray", "border-radius", "10px", "margin", "auto", "padding", "5px", "max-width", "min-content", "margin-top", "50px", "margin-bottom", "50px"], [3, "src", "width", "height"], ["style", "color: white; padding:25px 15px 10px; font-size: medium;", 4, "ngIf"], [2, "color", "white", "padding", "25px 15px 10px", "font-size", "medium"], [2, "color", "white", "font-size", "large", "text-indent", "30px"], ["id", "button", "target", "_blank", 2, "margin", "30px", 3, "href"]], template: function DescriptionComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -1927,7 +2231,7 @@ DescriptionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
                 templateUrl: './description.component.html',
                 styleUrls: ['./description.component.css']
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"] }, { type: _url_service__WEBPACK_IMPORTED_MODULE_3__["UrlService"] }, { type: _offline_data_service__WEBPACK_IMPORTED_MODULE_4__["OfflineDataService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, null); })();
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _message_service_backend_connector_service__WEBPACK_IMPORTED_MODULE_2__["BackendConnectorService"] }, { type: _url_service__WEBPACK_IMPORTED_MODULE_3__["UrlService"] }, { type: _offline_service_offline_data_service__WEBPACK_IMPORTED_MODULE_4__["OfflineDataService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, null); })();
 
 
 /***/ }),
